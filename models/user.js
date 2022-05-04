@@ -15,7 +15,14 @@ var User = new Schema({
     admin:{
         type: Boolean,
         default: false
+    },
+    
+    favorites:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Favorite'
     }
+
+    
 });
 
 User.plugin(passportLocalMongoose);
